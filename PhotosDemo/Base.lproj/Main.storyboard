@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Pl-yZ-Ewq">
+                                <rect key="frame" x="30" y="247" width="315" height="30"/>
+                                <color key="backgroundColor" red="0.98039215686274506" green="0.98039215686274506" blue="0.94117647058823528" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="保存上面图片到相册"/>
+                                <connections>
+                                    <action selector="saveImageToPhotos:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PDg-aB-Ohn"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FTd-HA-E9X">
+                                <rect key="frame" x="30" y="322" width="315" height="30"/>
+                                <color key="backgroundColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.94117647059999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="保存 网络图片到相册"/>
+                                <connections>
+                                    <action selector="saveWebImageToPhotos:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4bI-cL-r8R"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Unknown.jpeg" translatesAutoresizingMaskIntoConstraints="NO" id="Cf9-Qm-Tyv">
+                                <rect key="frame" x="67" y="50" width="240" height="147"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Cf9-Qm-Tyv" secondAttribute="height" multiplier="80:49" id="58u-jb-B8I"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="FTd-HA-E9X" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="30" id="0Ed-8o-7lj"/>
+                            <constraint firstItem="7Pl-yZ-Ewq" firstAttribute="top" secondItem="Cf9-Qm-Tyv" secondAttribute="bottom" constant="50" id="EE9-Cz-Kfl"/>
+                            <constraint firstAttribute="trailing" secondItem="Cf9-Qm-Tyv" secondAttribute="trailing" constant="68" id="PTZ-cq-FY0"/>
+                            <constraint firstItem="Cf9-Qm-Tyv" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="67" id="Yr2-dZ-2CH"/>
+                            <constraint firstItem="Cf9-Qm-Tyv" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="30" id="cCs-AV-B4F"/>
+                            <constraint firstItem="FTd-HA-E9X" firstAttribute="top" secondItem="7Pl-yZ-Ewq" secondAttribute="bottom" constant="45" id="frI-zc-j8o"/>
+                            <constraint firstAttribute="trailing" secondItem="FTd-HA-E9X" secondAttribute="trailing" constant="30" id="jj1-7h-HKJ"/>
+                            <constraint firstAttribute="trailing" secondItem="7Pl-yZ-Ewq" secondAttribute="trailing" constant="30" id="nSf-7l-M8X"/>
+                            <constraint firstItem="7Pl-yZ-Ewq" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="30" id="xSS-Yv-5yP"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="Cf9-Qm-Tyv" id="VRM-69-SnM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="140" y="138.98050974512745"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Unknown.jpeg" width="1080" height="647"/>
+    </resources>
+</document>
